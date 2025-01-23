@@ -1,0 +1,5 @@
+# Ignore all CSS files
+*.css
+
+# Ignore all .DS_Store files (MacOS system files)
+.DS_Store
