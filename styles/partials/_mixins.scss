@@ -1,0 +1,20 @@
+// ---------------------------------------------------//
+// ---------------------------------------------------//
+// define the tablet and desktop break points and mixins
+// ---------------------------------------------------//
+$tablet-breakpoint: 768PX;
+$desktop-breakpoint: 1280PX;
+
+
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}

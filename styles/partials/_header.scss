@@ -1,0 +1,55 @@
+// style for header
+
+.header {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+
+  
+  // Style for nav bar
+  //   .nav-bar {
+  //     width: 100%;
+  //     height: 400px;
+  //     background-color: #000000;
+  //     color: #afafaf;
+
+  //     // &__logo {
+
+  //     // }
+
+  //     // &__options {
+
+  //     // }
+  //   }
+}
+
+@include tablet {
+  // .layout {
+  //     flex-direction: row;
+  // }
+
+  // .main-content {
+  //     width: 70%;
+  // }
+
+  // .sidebar {
+  //     width: 30%;
+  // }
+}
+
+.block {
+  @include tablet {
+  }
+}
+
+@include desktop {
+  // .sidebar {
+  //     background-color: orange;
+  //     padding: 2rem;
+  // }
+
+  // .main-content {
+  //     padding: 2rem;
+  //     font-size: 150%;
+  // }
+}
