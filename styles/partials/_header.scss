@@ -3,9 +3,9 @@
 .header {
   height: 100%;
   width: 100%;
-  background-color: pink;
-
   
+
+
   // Style for nav bar
   //   .nav-bar {
   //     width: 100%;
@@ -23,33 +23,30 @@
   //   }
 }
 
-@include tablet {
-  // .layout {
-  //     flex-direction: row;
-  // }
+// @include tablet {
+//   // .layout {
+//   //     flex-direction: row;
+//   // }
 
-  // .main-content {
-  //     width: 70%;
-  // }
+//   // .main-content {
+//   //     width: 70%;
+//   // }
 
-  // .sidebar {
-  //     width: 30%;
-  // }
-}
+//   // .sidebar {
+//   //     width: 30%;
+//   // }
+// }
 
-.block {
-  @include tablet {
-  }
-}
 
-@include desktop {
-  // .sidebar {
-  //     background-color: orange;
-  //     padding: 2rem;
-  // }
 
-  // .main-content {
-  //     padding: 2rem;
-  //     font-size: 150%;
-  // }
-}
+// @include desktop {
+//   // .sidebar {
+//   //     background-color: orange;
+//   //     padding: 2rem;
+//   // }
+
+//   // .main-content {
+//   //     padding: 2rem;
+//   //     font-size: 150%;
+//   // }
+// }
