@@ -1,8 +1,13 @@
-@use "./partials/reset" as *;
-@use "./partials/typography" as *;
-@use "./partials/header" as *;
-@use "./partials/nav" as *;
-@use "./partials/mixins" as *;
+@use "./partials/reset" as *;  // reset
+@use "./partials/typography" as *; // typo
+@use "./partials/header" as *;    // header
+@use "./partials/nav" as *;         // nav
+// @use "./partials/mixins" as *;      // mixin
+@use "./partials/aboutMusicians" as *; // about
+@use "./partials/gallery" as *;    // gallery
+@use "./partials/footer" as *;     // footer
+
+
 
 
 

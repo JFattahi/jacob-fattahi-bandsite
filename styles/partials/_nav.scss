@@ -1,25 +1,134 @@
+@use "./mixins" as *;
+@use "./typography" as *;
 
 
 // Style for nav bar
 .nav-bar {
+
   width: 100%;
-  background-color: #000000;
+  background-color: #323232;
   color: #AFAFAF;
 
   display: flex;
-  
+  flex-direction: column;
 
 
-  // &__logo {
+  font-size: .875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
 
+  &--active {
+    color: #FFFFFF;
+    font-weight: 500;
+    border-bottom: 2px solid #FFFFFF;
+  }
+
+
+  &__logo {
+
+    // padding: 1rem;
+    align-self: center;
+    width: 120px;
+    margin-top: 1rem;
+  }
+
+  &__img {
+    max-height: 20px;
+    max-width: 120px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+
+  &__options {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    align-self: center;
+    
+  }
+
+  &__link {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+  }
+
+
+
+}
+
+
+// ------------------------- tablet ----------------------------
+
+@include tablet {
+  .nav-bar {
+    flex-direction: row;
+    align-items: center;
+
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;    
+    
+  &__logo {
+
+    // padding: 1rem;
+    align-self: center;
+    width: 140px;
+    margin: 0 2rem;
+  }
+
+  &__img {
+    max-height: 20px;
+    max-width: 120px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+
+  &__options {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    
+  }
+
+  &__link {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    margin: 0 2rem;
+  }
+
+
+
+  }
+  // .main-content {
+  //     width: 70%;
   // }
 
-
-  // &__options {
-
+  // .sidebar {
+  //     width: 30%;
   // }
+}
 
+// -------------------------- desktop -------------------
 
+@include desktop {
 
+  .nav-bar {
 
+    &__logo {
+      margin-left: 3.5rem;
+    }
+  }
 }

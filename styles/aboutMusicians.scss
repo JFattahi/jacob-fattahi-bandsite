@@ -1,0 +1,96 @@
+@use "./partials/mixins" as *; // mixin
+// @use "./partials/typography" as *; // typo
+
+.about {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 0 1rem;
+
+  &__h1 {
+    // Text size: 24px | Line height: 32px | Text weight: Bold 700
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin: 1.5rem 0 1rem;
+  }
+
+  &__img-wrap {
+    width: 100%;
+    // height: 200px;
+  }
+
+  &__img {
+    // height: 10vw;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__sub-header {
+    // Text size: 14px | Line height: 22px | Text weight: Medium 500
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  &__p-head {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  &__p {
+    // Text size: 13px | Line height: 18px | Text weight: Regular 400
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;    
+  }
+}
+
+@include tablet {
+  .about {
+    &__h1 {
+      // Text size: 60px | Line height: 68px | Text weight: Bold 700
+      font-size: 3.75rem;
+      line-height: 68px;
+      font-weight: 700;
+      margin: 1.5rem 0 1rem;
+    }
+
+    &__sub-header {
+      // Text size: 24px | Line height: 32px | Text weight: Medium 500
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+
+    &__p-head {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    &__p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;        
+    }
+
+    &__two-paragraphs {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+// @include desktop {
+//   // .sidebar {
+//   //     background-color: orange;
+//   //     padding: 2rem;
+//   // }
+
+//   // .main-content {
+//   //     padding: 2rem;
+//   //     font-size: 150%;
+//   // }
+// }
