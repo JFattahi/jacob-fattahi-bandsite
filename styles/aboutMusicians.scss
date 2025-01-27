@@ -5,6 +5,7 @@
   width: 100%;
   background-color: #fafafa;
   padding: 0 2rem;
+  color: #323232;
 
   &__h1 {
     // Text size: 24px | Line height: 32px | Text weight: Bold 700
@@ -12,6 +13,7 @@
     line-height: 2rem;
     font-weight: 700;
     margin: 1.5rem 0 1rem;
+    color: #323232;
   }
 
   &__img-wrap {
@@ -86,14 +88,32 @@
   }
 }
 
-// @include desktop {
-//   // .sidebar {
-//   //     background-color: orange;
-//   //     padding: 2rem;
-//   // }
+@include desktop {
+  .about {
+    padding: 2rem 19.5rem;
+    &__p {
+      font-size: 20px;
+      line-height: normal;
+      // width: 430px; 
+      width: 614px;
+    }
+    &__h1 {
+      font-size: 45px;
+      font-weight: 700;
+      margin: 2rem -8rem 2rem;
+    }
+    &__sub-header {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: normal;
 
-//   // .main-content {
-//   //     padding: 2rem;
-//   //     font-size: 150%;
-//   // }
-// }
+      .p1 {
+        width: 965px;
+      }
+    }
+  } 
+// width 965 px
+
+   
+ 
+}

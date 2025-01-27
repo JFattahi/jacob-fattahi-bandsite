@@ -50,14 +50,13 @@
   }
 }
 
-// @include desktop {
-//   // .sidebar {
-//   //     background-color: orange;
-//   //     padding: 2rem;
-//   // }
+@include desktop {
+  .header {
+    &__txt {
+  
+      margin-left: 10%;
+  
+    }
 
-//   // .main-content {
-//   //     padding: 2rem;
-//   //     font-size: 150%;
-//   // }
-// }
+  }
+}

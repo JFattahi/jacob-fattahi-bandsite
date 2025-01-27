@@ -68,6 +68,12 @@
 
 @include desktop {
   .gallery {
-    padding: 2rem 7rem 1rem;
+    padding: 2rem 12rem 1rem;
+
+    h1 { // 3rem 2rem 49px
+      font-size: 49px;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
   }
 }
