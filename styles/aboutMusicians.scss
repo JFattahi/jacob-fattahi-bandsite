@@ -49,17 +49,18 @@
 
 @include tablet {
   .about {
+    padding: 0 5rem;
     &__h1 {
       // Text size: 60px | Line height: 68px | Text weight: Bold 700
-      font-size: 3.75rem;
+      font-size: 2.25rem;
       line-height: 68px;
-      font-weight: 700;
-      margin: 1.5rem 0 1rem;
+      font-weight: 500;
+      margin: 1.5rem -3rem 1rem;
     }
 
     &__sub-header {
       // Text size: 24px | Line height: 32px | Text weight: Medium 500
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 500;
       line-height: 32px;
     }
@@ -73,12 +74,14 @@
     &__p {
     font-size: 14px;
     font-weight: 400;
-    line-height: 22px;        
+    line-height: 22px;     
+    width: 289px;   
     }
 
     &__two-paragraphs {
       display: flex;
       justify-content: space-between;
+
     }
   }
 }
