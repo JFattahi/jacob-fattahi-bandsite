@@ -31,7 +31,7 @@
 
 @include tablet {
   .gallery {
-    padding: 2rem 3rem 1rem;
+    padding: 2rem 2rem 1rem;
     display: flex;
     flex-direction: column;
 
@@ -50,11 +50,15 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      // gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 1rem;
     }
 
     &__img-wrap {
-      width: 25vw;
-      margin: 1rem;
+      width: 220px;
+      width: calc((100% - 4rem)/3) ;
     }
 
     img {
@@ -62,14 +66,8 @@
   }
 }
 
-// @include desktop {
-//   // .sidebar {
-//   //     background-color: orange;
-//   //     padding: 2rem;
-//   // }
-
-//   // .main-content {
-//   //     padding: 2rem;
-//   //     font-size: 150%;
-//   // }
-// }
+@include desktop {
+  .gallery {
+    padding: 2rem 7rem 1rem;
+  }
+}
