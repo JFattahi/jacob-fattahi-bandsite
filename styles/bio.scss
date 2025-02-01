@@ -1,11 +1,10 @@
-@use "./partials/reset" as *;  // reset
-@use "./partials/typography" as *; // typography
-@use "./partials/header" as *;    // header
-@use "./partials/nav" as *;         // nav
+@use "./partials/reset"; // reset
+@use "./partials/typography"; // typography
+@use "./partials/header"; // header
+@use "./partials/nav"; // nav
 // @use "./partials/mixins" as *;      // mixin
 // @use "./partials/gallery" as *;    // gallery
 // @use "./partials/footer" as *;     // footer
-
-
-
+@use "./partials/aboutMusicians";
+@use "./partials/footer"; 
 
