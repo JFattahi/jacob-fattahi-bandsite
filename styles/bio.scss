@@ -4,7 +4,8 @@
 @use "./partials/nav"; // nav
 // @use "./partials/mixins" as *;      // mixin
 // @use "./partials/gallery" as *;    // gallery
-// @use "./partials/footer" as *;     // footer
-@use "./partials/aboutMusicians";
+@use "./partials/aboutMusicians";     // about musicians
 @use "./partials/footer"; 
+@use "./partials/gallery";
+
 
