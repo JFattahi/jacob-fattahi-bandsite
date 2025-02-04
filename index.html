@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/bio.css" />
-    <link rel="stylesheet" href="./styles/gallery.css" />
-    <link rel="stylesheet" href="./styles/footer.css" />
 
     <title>Band Site</title>
     <!-- link bio css -->
@@ -16,17 +14,19 @@
       <!-- nav bar -->
       <nav class="nav-bar">
         <div class="nav-bar__logo">
-          <img
-            class="nav-bar__img"
-            src="./assets/logos/Logo-bandsite.svg"
-            alt="bandsite logo"
-          />
+          <a href="./index.html">
+            <img
+              class="nav-bar__img"
+              src="./assets/logos/Logo-bandsite.svg"
+              alt="bandsite logo"
+            />
+          </a>
         </div>
         <div class="nav-bar__options">
           <div class="nav-bar__link nav-bar--active">
             <a href="">Biography</a>
           </div>
-          <div class="nav-bar__link"><a href=""></a>Shows</div>
+          <div class="nav-bar__link"><a href="./shows.html">Shows</a></div>
         </div>
       </nav>
       <!-- --------------------------hero picture----------------------- -->
@@ -108,6 +108,54 @@
         </div>
       </div>
     </section>
+    <!-- ------------------------------Commenter form and comments-------------------- -->
+    <section class="comment-form">
+      <h2 class="comment-form__title">Join the Conversation</h2>
+      <form id="commenter-form" class="commenter-form" novalidate>
+        <article class="commenter-form__layout">
+          <article class="commenter-form__avatar">
+            <img
+              src="./assets/Images/Mohan-muruge.jpg"
+              alt="avatar"
+              class="commenter-form__avatar__image"
+            />
+          </article>
+
+          <article class="commenter-form__fields">
+            <article class="commenter-form__field">
+              <label for="commenterName">Name</label>
+              <input
+                type="text"
+                name="commenterName"
+                placeholder="Enter your name"
+                required
+              />
+            </article>
+
+            <article class="commenter-form__field">
+              <label for="commentText">Comment</label>
+              <textarea
+                name="commentText"
+                placeholder="Add a new comment"
+                required
+                style=resize:none;
+              ></textarea>
+            </article>
+
+            <article class="commenter-form__button-wrapper">
+              <button type="submit" class="commenter-form__button">
+                Comment
+              </button>
+            </article>
+          </article>
+        </article>
+      </form>
+
+      <article id="comments">
+        <script src="./scripts/index-page.js"></script>
+      </article>
+    </section>
+
     <footer class="foot">
       <div class="ctn-1">
         <div class="foot__touch"><h3>Get in Touch</h3></div>
@@ -161,7 +209,9 @@
         </div>
       </div>
       <div class="foot__bandsite">
-        <img src="./assets/logos/Logo-bandsite.svg" alt="bandsite logo" />
+        <a href="./index.html">
+          <img src="./assets/logos/Logo-bandsite.svg" alt="bandsite logo" />
+        </a>
       </div>
       <div class="ctn-3">
         <div class="foot__copy-right">
