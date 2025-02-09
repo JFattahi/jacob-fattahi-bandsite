@@ -8,20 +8,27 @@
 // https://unit-2-project-api-25c1595833b2.herokuapp.com/showdates?api_key=eea8ae78-e00d-4379-b5f9-bca9bbc688e4
 const API_KEY = "eea8ae78-e00d-4379-b5f9-bca9bbc688e4";
 const BASE_URL = "https://unit-2-project-api-25c1595833b2.herokuapp.com";
+const final_url = "https://unit-2-project-api-25c1595833b2.herokuapp.com/showdates?api_key=eea8ae78-e00d-4379-b5f9-bca9bbc688e4";
 
 // turn ms from epoch to desired date format
 const formattedDate = (timestamp) => new Date(timestamp).toDateString();
 
 // gets the showDates Array from API
 async function getShowsArray() {
-  return await axios.get(`${BASE_URL}/showdates?api_key=${API_KEY}`);
+  let result;
+  try {
+    result = await axios.get(final_url);
+    console.log("from getShowsArray :)");
+    console.log(typeof(result));
+    console.log(result.data);
+  }catch (error){
+    console.log(error)
+  }
+  return result.data;
 }
 
 // shows Array gotten from the server
-const showsArray2 = getShowsArray();
-
-
-
+let showsArray2;
 
 
 
@@ -59,6 +66,7 @@ const showsArray = [
   },
 ];
 
+// -------------------------------------------------- create show card ---------------------------------------
 // show is an object in shows array
 function createShowCard(show) {
 
@@ -71,8 +79,9 @@ function createShowCard(show) {
 
   const showDate = document.createElement("p");
   showDate.classList.add("show__date");
-  // change this
-  showDate.textContent = show.date;
+  // change this  done
+  // console.log("show.date is: " + formattedDate(show.date));
+  showDate.textContent = formattedDate(show.date);
 
   const showVenueLabel = document.createElement("p");
   showVenueLabel.classList.add("show__label");
@@ -80,8 +89,8 @@ function createShowCard(show) {
 
   const showVenue = document.createElement("p");
   showVenue.classList.add("show__venue");
-  // change this
-  showVenue.textContent = show.venue;
+  // change this     done
+  showVenue.textContent = show.place;
 
   const showLocationLabel = document.createElement("p");
   showLocationLabel.classList.add("show__label");
@@ -89,7 +98,7 @@ function createShowCard(show) {
 
   const showLocation = document.createElement("p");
   showLocation.classList.add("show__location");
-  // change this
+  // change this   done
   showLocation.textContent = show.location;
 
   const showButton = document.createElement("button");
@@ -143,15 +152,25 @@ function renderShows() {
   showsSection.classList.add("shows");
   const showsHeader = createShowsHeader();
   showsSection.appendChild(showsHeader);
-  showsArray.forEach((show) => {
+  // call to Array
+  showsArray2.forEach( (show) => {
+    console.log(show);
     const showCard = createShowCard(show);
     showsSection.appendChild(showCard);
   });
 
-  document.body.appendChild(showsSection);
+  document.getElementById("main").appendChild(showsSection);
 }
 
 // ---------------------------------------- execute ---------------------------------------
 
-// renderSHows() ->  createShowCard() ->
-renderShows();
+
+console.log("now at buttom");
+async function renderAll() {
+  showsArray2 =  await getShowsArray();
+  console.log(showsArray2);
+
+  renderShows();
+}
+renderAll();
+
