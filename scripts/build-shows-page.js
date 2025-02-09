@@ -5,10 +5,8 @@
  *
  *
  */
-// https://unit-2-project-api-25c1595833b2.herokuapp.com/showdates?api_key=eea8ae78-e00d-4379-b5f9-bca9bbc688e4
-const API_KEY = "eea8ae78-e00d-4379-b5f9-bca9bbc688e4";
 const BASE_URL = "https://unit-2-project-api-25c1595833b2.herokuapp.com";
-const final_url = "https://unit-2-project-api-25c1595833b2.herokuapp.com/showdates?api_key=eea8ae78-e00d-4379-b5f9-bca9bbc688e4";
+const API_KEY = "eea8ae78-e00d-4379-b5f9-bca9bbc688e4";
 
 // turn ms from epoch to desired date format
 const formattedDate = (timestamp) => new Date(timestamp).toDateString();
@@ -17,10 +15,7 @@ const formattedDate = (timestamp) => new Date(timestamp).toDateString();
 async function getShowsArray() {
   let result;
   try {
-    result = await axios.get(final_url);
-    console.log("from getShowsArray :)");
-    console.log(typeof(result));
-    console.log(result.data);
+    result = await axios.get(`${BASE_URL}/showdates?api_key=${API_KEY}`);
   }catch (error){
     console.log(error)
   }
@@ -30,41 +25,6 @@ async function getShowsArray() {
 // shows Array gotten from the server
 let showsArray2;
 
-
-
-// hold the info for the shows
-const showsArray = [
-  {
-    date: "Mon Sept 09 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 17 2024",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Oct 12 2024",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 16 2024",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 29 2024",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 18 2024",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
 
 // -------------------------------------------------- create show card ---------------------------------------
 // show is an object in shows array
@@ -79,8 +39,6 @@ function createShowCard(show) {
 
   const showDate = document.createElement("p");
   showDate.classList.add("show__date");
-  // change this  done
-  // console.log("show.date is: " + formattedDate(show.date));
   showDate.textContent = formattedDate(show.date);
 
   const showVenueLabel = document.createElement("p");
@@ -89,7 +47,6 @@ function createShowCard(show) {
 
   const showVenue = document.createElement("p");
   showVenue.classList.add("show__venue");
-  // change this     done
   showVenue.textContent = show.place;
 
   const showLocationLabel = document.createElement("p");
@@ -98,7 +55,6 @@ function createShowCard(show) {
 
   const showLocation = document.createElement("p");
   showLocation.classList.add("show__location");
-  // change this   done
   showLocation.textContent = show.location;
 
   const showButton = document.createElement("button");
@@ -165,11 +121,8 @@ function renderShows() {
 // ---------------------------------------- execute ---------------------------------------
 
 
-console.log("now at buttom");
 async function renderAll() {
   showsArray2 =  await getShowsArray();
-  console.log(showsArray2);
-
   renderShows();
 }
 renderAll();
