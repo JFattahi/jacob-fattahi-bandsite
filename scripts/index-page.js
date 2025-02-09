@@ -4,6 +4,7 @@
  *
  *
  *********************************************************** */
+const API_KEY = "eea8ae78-e00d-4379-b5f9-bca9bbc688e4";
 
 // Array holding the comments
 const commentsArray = [
